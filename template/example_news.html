@@ -1,0 +1,116 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-07-28 23:11:19
+ * @LastEditTime: 2022-07-28 23:48:22
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .basic {
+      width: 1000px;
+      height: 900px;
+      margin: 0 auto;
+    }
+
+    .centerStyle {
+      text-align: center;
+    }
+
+    .spanColor1 {
+      color: #808080;
+    }
+
+    .spanColor2 {
+      color: #87ceeb;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .photo {
+      width: 800px;
+      margin: 0 auto;
+
+      /* 对于img/input/文本这一类的元素 设置居中效果, 都是需要在父级元素中设置, 此处为了设置img的居中效果*/
+      text-align: center;
+    }
+
+    img {
+      width: 600px;
+    }
+
+    .photoNote {
+      font-size: 12px;
+      /* 描述颜色时, 六个一样的字符可以省略成三个; #ffffff=#fff */
+      color: #ccc;
+      line-height: 30px;
+    }
+
+    .photoSrc {
+      font-size: 12px;
+      color: ffa500;
+    }
+
+    .news {
+      font-size: 18px;
+      text-indent: 2em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="basic">
+    <h1 class="centerStyle">冬奥会后首次元首线下会谈, 中国与印尼携手传递哪些信息?</h1>
+    <!-- 此处需求 三种样式在同一行, 行居中, 改变颜色, 超链接不要下划线 -->
+    <!-- 需要在一行 且不同样式, span a b等都可以满足 -->
+    <p class="centerStyle">
+      <span class="spanColor1">2022.3.29 14:59</span>
+      <span class="spanColor2">新浪科技</span>
+      <a href="">收藏本文</a>
+    </p>
+
+    <hr>
+
+    <div class="photo">
+      <img src="../public/test.png" alt="">
+      <div class="photoNote">印尼西爪哇,工人们在绿色梯田照料洋葱</div>
+      <div class="photoSrc">图/视觉中国</div>
+    </div>
+
+    <p class="news">
+      7月26日下午, 习近平主席同印度尼西亚总统佐科举行会谈。佐科总统是北京冬奥会后首位访华的外国元首, 中国也是佐科总统疫后首次东亚之行的首站。
+      今年, 全球治理迎来“亚洲时刻”。上半年, 中国主办了金砖国家领导人会晤, 下半年, 印尼将主办二十国集团领导人峰会。两国元首的这次面对面沟通, 格外令人瞩目。
+    </p>
+
+    <p class="news">当天的会谈在北京钓鱼台国宾馆举行。北京冬奥会前夕, 习近平主席曾在这里会见出席冬奥会的部分贵宾。
+      印尼与中国隔海相望, 有着“千岛之国”的美称。印尼也是东盟领头羊和全球新兴经济体的主要代表之一。
+      2013年10月, 习近平作为国家主席首次访问东南亚国家, 首站就是印尼。正是在这次出访中, 他首次提出共同建设21世纪“海上丝绸之路”的倡议。
+    </p>
+
+    <p class="news">
+      佐科2014年就任印尼总统, 并于2019年连任。佐科总统曾经多次访华。疫情发生以来, 习主席同佐科总统已经先后6次通电话, 最近一次是今年3月16日。
+      习主席曾用“志同道合”来形容两国之间的关系。
+      1955年, 中国和印尼两国同其他亚非国家携手合作, 在万隆会议上共同倡导了以和平共处、求同存异为核心的万隆精神。
+    </p>
+
+    <p class="news">
+      时隔60年, 2015年4月, 习主席应邀赴印尼出席相关纪念活动。在雅加达, 佐科总统邀请习主席第一个在亚非领导人会议上发表讲话。在万隆, 亚非国家领导人沿着60年前的路线步行前往万隆会议旧址。在这场历史性步行中,
+      两国元首并肩走在队伍的最前面。
+    </p>
+  </div>
+
+</body>
+
+</html>

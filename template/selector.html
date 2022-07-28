@@ -1,0 +1,70 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-07-28 20:28:14
+ * @LastEditTime: 2022-07-28 22:04:33
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 1. 内嵌式: 可以写在页面的任意位置, 通常约定写在head中 -->
+  <style>
+    /* 1a. p是标签选择器, 想给什么标签添加样式就写什么标签, 比较局限, 会给页面所有这个标签的元素应用该样式 */
+    p {
+      color: aqua;
+      background-color: gainsboro;
+      font-size: 20px;
+    }
+
+    /* 1b. 类选择器: 定义: .类名{}; 应用: <div class="类名"></div> */
+    .coralStyle {
+      color: coral;
+    }
+
+    .bigStyle {
+      font-size: 40px;
+    }
+
+    /* 1c. id选择器: 不用于美化, 而是配合js找标签, 加动态效果; 定义: #id属性值{}; 应用 <div id="id属性值"></div>*/
+    #idSelector {
+      color: green;
+    }
+
+    /* 1d. 通配符选择器: 给页面中所有标签设置样式, 一般只设置默认边距 */
+    * {
+      color: brown;
+      margin: 10px;
+      padding: 5px;
+    }
+  </style>
+
+  <!-- 2. 外联式: stylesheet意味着引入样式表-->
+  <link rel="stylesheet" href="../style/myStyle.css">
+
+</head>
+
+<body>
+  <p>Hello World!</p>
+  <h1>Test myStyle.css</h1>
+  <!-- 3. 行内式: 写在标签的style属性中, 只能控制制定标签-->
+  <div style="color:cadetblue; font-size: 30px;">行内式css</div>
+
+  <!-- 多个标签可用一个类选择器, 一个标签也可以同时用多个类选择器, 类名以空格隔开 -->
+  <div class="coralStyle bigStyle">这里应用了类选择器</div>
+
+  <!-- id选择器类似于身份证号, 在一个页面中是唯一的, 一个id选择器只能被一个元素应用 -->
+  <div id="idSelector">这里应用了id选择器</div>
+
+  <div>普通div标签</div>
+  <h2>普通p标签</h2>
+  <span>普通span标签</span>
+</body>
+
+</html>

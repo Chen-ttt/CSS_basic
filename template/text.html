@@ -1,0 +1,89 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-07-28 22:32:00
+ * @LastEditTime: 2022-07-28 23:09:01
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    h1 {
+      /* 水平对齐方式 */
+      text-align: center;
+
+      /* 文本修饰 
+         underline: 下划线
+         line-through: 删除线
+         overline: 上划线
+         none: 无装饰线
+      */
+      text-decoration: underline;
+    }
+
+    p {
+      /* 文本缩进 单位:px/em em表示一个当前字体的font-size, 因此缩进2em就是缩进两个字 */
+      text-indent: 2em;
+
+      /* 行高(上间距+文本高度+下间距): 数字px/倍数(当前标签font-size的倍数) */
+      line-height: 2;
+
+      /* font复合属性中也可以写行高 把第三个值换成size/line-height */
+      font: italic 400 20px/3 Times;
+      /* 都设置的话, 会将上面的两倍行距覆盖 */
+    }
+
+    img {
+      height: 300px;
+    }
+
+    body {
+      /* 注意 text-align其实是内容对齐属性, 可以让很多元素居中: 文本/span/a/input/img 
+         但需要给元素的父级添加该属性才能生效
+      */
+      text-align: center;
+    }
+
+    .divStyle {
+      /* 标签水平居中 应用到div/p/h 
+         0表示上下 auto表示左右 */
+      margin: 0 auto;
+
+      /* 需要设置宽度, 不然一般默认占满父元素 */
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Center Title</h1>
+  <p>层叠样式表(英文全称:Cascading Style Sheets)是一种用来表现HTML
+    (标准通用标记语言的一个应用)或XML(标准通用标记语言的一个子集)等文件样式的计算机语言。
+    CSS不仅可以静态地修饰网页,还可以配合各种脚本语言动态地对网页各元素进行格式化。
+    The course is taught in a practical way, with comprehensive cases from first-tier factories, using the shortest
+    path to explain each technical point, with each chapter forming its own closed loop.
+    Project 1 is a corporate station, which is a quick and repeated practice of basic knowledge points
+    Project 2 is an e-commerce station, which upgrades the difficulty based on Project 1, to master the development
+    process and layout standards of more complex web effects.
+    Strictly in accordance with the professional development process: professional measurement tools, to achieve 100%
+    restoration of the design;
+    coding standards against the first-line large manufacturers development standards, to achieve the professional
+    development from beginning to end.
+    Students will be able to experience the development process and standards of the first-tier manufacturers.
+  </p>
+
+  <img src="../public/test.png" alt="">
+
+  <div class="divStyle">hhhh</div>
+</body>
+
+</html>

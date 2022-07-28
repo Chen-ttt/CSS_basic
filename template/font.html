@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Tong Chen
  * @Date: 2022-07-28 22:05:08
- * @LastEditTime: 2022-07-28 22:21:54
+ * @LastEditTime: 2022-07-28 23:01:57
  * @LastEditors:  
 -->
 <!DOCTYPE html>
@@ -31,6 +31,16 @@
 
     h1 {
       font-weight: 600;
+      /* rgba -- a表示透明度, 取值0-1 */
+      color: rgba(255, 100, 100, 0.5);
+    }
+
+    h2 {
+      /* font复合属性 一个属性冒号后多个值, 以空格隔开 
+         font: style weight size family
+         如果省略, 只能省略前两个, 后两个不能省略, 如果省略, 将使用默认值
+      */
+      font: italic 600 70px Times;
     }
   </style>
 </head>
@@ -40,6 +50,7 @@
   <h1>标题</h1>
   <p>段落文字</p>
 
+  <h2>这里应用font复合属性</h2>
 </body>
 
 </html>

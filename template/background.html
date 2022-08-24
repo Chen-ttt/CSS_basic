@@ -1,0 +1,81 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-24 00:34:40
+ * @LastEditTime: 2022-08-24 00:59:12
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* background-color: 关键字 rgb rgba 十六进制... */
+    /* 默认是rgba(0, 0, 0, 0) transparent */
+    .bgColor {
+      width: 400px;
+      height: 400px;
+      background-color: rgba(0, 255, 255, 0.5);
+    }
+
+    /* background-image: url(path) */
+    .bgImg {
+      width: 400px;
+      height: 400px;
+      background-color: brown;
+      background-image: url(../public/smallTest.png);
+    }
+
+    /* background-repeat: no-repeat 图片不平铺 */
+    /* repeat-x / repeat-y : 沿着x/y轴平铺 */
+    .bgImgRe {
+      width: 400px;
+      height: 400px;
+      background-color: yellowgreen;
+      background-image: url(../public/smallTest.png);
+      background-repeat: no-repeat;
+    }
+
+    /* 定位 background-position: 水平方向位置 垂直方向位置; */
+    /* 表示位置可以用 1. 方位名词(left/right/center/top/bottom) */
+    /* 2. 像素px (0,0)表示原点; 可以为负值, 会往反方向走, 但出界的部分不会显示*/
+    .bgImgPo {
+      width: 400px;
+      height: 400px;
+      background-color: pink;
+      background-image: url(../public/smallTest.png);
+      background-repeat: no-repeat;
+      /* background-position: 50% 50%; */
+      background-position: -50px 50px;
+      /* background-position: right bottom; */
+    }
+
+    /* 复合 */
+    /* background: color image repeat position (推荐按照这个属性写, 打乱也可以)*/
+    .bgImgCom {
+      width: 400px;
+      height: 400px;
+      background: skyblue url(../public/smallTest.png) repeat-x center center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="bgColor">div1</div>
+  <br>
+  <div class="bgImg">div2</div>
+  <br>
+  <div class="bgImgRe">div3</div>
+  <br>
+  <div class="bgImgPo">div4</div>
+  <br>
+  <div class="bgImgCom">div5</div>
+</body>
+
+</html>

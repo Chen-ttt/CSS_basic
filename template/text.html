@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Tong Chen
  * @Date: 2022-07-28 22:32:00
- * @LastEditTime: 2022-07-28 23:09:01
+ * @LastEditTime: 2022-08-23 23:44:23
  * @LastEditors:  
 -->
 <!DOCTYPE html>
@@ -32,7 +32,7 @@
       /* 文本缩进 单位:px/em em表示一个当前字体的font-size, 因此缩进2em就是缩进两个字 */
       text-indent: 2em;
 
-      /* 行高(上间距+文本高度+下间距): 数字px/倍数(当前标签font-size的倍数) */
+      /* 行高(上间距+文本高度+下间距): 数字px or 倍数(当前标签font-size的倍数 or 百分比) */
       line-height: 2;
 
       /* font复合属性中也可以写行高 把第三个值换成size/line-height */
@@ -45,7 +45,7 @@
     }
 
     body {
-      /* 注意 text-align其实是内容对齐属性, 可以让很多元素居中: 文本/span/a/input/img 
+      /* 注意 text-align其实是内容对齐属性, 可以让行内元素居中: 文本/span/a/input/img 
          但需要给元素的父级添加该属性才能生效
       */
       text-align: center;

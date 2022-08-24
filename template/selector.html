@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Tong Chen
  * @Date: 2022-07-28 20:28:14
- * @LastEditTime: 2022-07-28 22:04:33
+ * @LastEditTime: 2022-08-24 00:28:14
  * @LastEditors:  
 -->
 <!DOCTYPE html>
@@ -43,6 +43,53 @@
       margin: 10px;
       padding: 5px;
     }
+
+    /* 1e. 后代选择器: 选择器(父) 选择器(子) {} */
+    /* 选择所有的后代元素应用; 这里的选择器用以上abcd四种选择器都可以 */
+    div p {
+      color: red;
+    }
+
+    /* 1f. 子代选择器: 选择器(父)>选择器(子) {} */
+    /* 只选择子代元素应用; 这里的选择器用以上abcd四种选择器都可以 */
+    div>a {
+      color: chartreuse;
+    }
+
+    /* 1g. 并集选择器: 选择器1,选择器2 {} */
+    /* 这里的选择器用以上abcd四种选择器都可以 */
+    h3,
+    h4 {
+      color: violet;
+    }
+
+    .div1,
+    .div2 {
+      color: blueviolet;
+    }
+
+    /* 1h. 交集选择器: 选择器1.选择器2 {} */
+    /* 找到同时满足两个选择器的标签 */
+    button.box {
+      color: purple;
+    }
+
+    /* 1i. 伪类选择器 选择器:行为 {}*/
+    /* 任何标签都可以添加伪类 */
+    .h666:hover {
+      color: aqua;
+      background-color: blue;
+    }
+
+    /* a链接访问前 */
+    a:link {
+      color: black;
+    }
+
+    /* a链接访问后 */
+    a:visited {
+      color: chocolate;
+    }
   </style>
 
   <!-- 2. 外联式: stylesheet意味着引入样式表-->
@@ -62,9 +109,38 @@
   <!-- id选择器类似于身份证号, 在一个页面中是唯一的, 一个id选择器只能被一个元素应用 -->
   <div id="idSelector">这里应用了id选择器</div>
 
-  <div>普通div标签</div>
-  <h2>普通p标签</h2>
-  <span>普通span标签</span>
+  <div>通配符选择器: 普通div标签</div>
+  <h2>通配符选择器: 普通p标签</h2>
+  <span>通配符选择器: 普通span标签</span>
+
+
+  <div>
+    <p>后代选择器: div的子 p标签</p>
+    <div>
+      <p>后代选择器2: div的grand子 p标签</p>
+    </div>
+  </div>
+
+  <div>
+    div父级
+    <a href="a">div中的儿子a标签</a>
+    <span>
+      <a href="a">div中的孙子a标签</a>
+    </span>
+  </div>
+
+  <h3>并集选择器h3</h3>
+  <h4>并集选择器h4</h4>
+
+  <div class="div1">并集选择器div1</div>
+  <div class="div2">并集选择器div2</div>
+
+  <button class="box">交集选择器1</button>
+  <button>交集选择器2</button>
+  <h5 class="box">交集选择器3</h5>
+
+  <h6 class="h666">hover伪类选择器</h6>
+  <a href="../public/test.png">link visited伪类选择器</a>
 </body>
 
 </html>

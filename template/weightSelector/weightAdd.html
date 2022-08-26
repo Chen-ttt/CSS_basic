@@ -1,0 +1,62 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-26 23:24:04
+ * @LastEditTime: 2022-08-26 23:40:44
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <Style>
+    /* 权重叠加计算: 对于复合选择器, 计算(0, 0, 0, 0), 分别统计行内样式 / id选择器 / 类选择器 / 标签选择器 的个数 */
+    /* 比较时, 从第一位开始比较, 如果相同则往后比较, 如果不同, 则大的一方优先级更高 */
+
+    /* 注意: 如果四位数都相同, 则根据层叠性, 后面定义的样式优先级更高 */
+    /* 注意: !important如果不是继承属性, 则权重最高, 不需要比较了 */
+
+    /* (0, 1, 1, 0) */
+    .fatherDiv #oneID {
+      background-color: green;
+    }
+
+    /* (0, 1, 0, 1) */
+    div #oneID {
+      background-color: red;
+    }
+
+    /* (0, 0, 1, 1) */
+    div .sonP {
+      background-color: blue;
+    }
+
+    /* (0, 0, 0, 2) */
+    div p {
+      background-color: pink;
+    }
+
+    /* (0, 0, 2, 0) */
+    .fatherDiv .sonP {
+      background-color: yellow;
+    }
+
+    /* (0, 0, 1, 1) */
+    .fatherDiv p {
+      background-color: teal;
+    }
+  </Style>
+</head>
+
+<body>
+  <div class="fatherDiv">
+    <p class="sonP" id="oneID">I'm son</p>
+  </div>
+</body>
+
+</html>

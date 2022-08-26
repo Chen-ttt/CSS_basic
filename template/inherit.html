@@ -1,0 +1,62 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-26 22:33:10
+ * @LastEditTime: 2022-08-26 22:47:20
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      color: aquamarine;
+      font-size: 50px;
+      background-color: pink;
+
+      /* height属性不被继承 */
+      height: 300px;
+    }
+
+    span {
+      /* 子元素没有的样式会继承, 如color, font-size */
+      /* 子元素自己设置了color则显示自己的 */
+      color: burlywood;
+      background-color: brown;
+    }
+
+    a {
+      /* a链接的color是特例, 因为a链接有自己的color, 因此不会继承div的color */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- CSS特性: 继承性 & 层叠性 -->
+  <!-- 常见的可继承的属性: 文字控制属性都可以继承 -->
+  <!-- 1. color -->
+  <!-- 2. font-style, font-weight, font-size, font-family -->
+  <!-- 3. text-indent, text-align -->
+  <!-- 4. line-height -->
+  <!-- .... -->
+
+  <!-- 控制标签本身的都不能继承 -->
+
+  <div>
+    Father div
+    <span>Son in div</span>
+
+    <!-- a的color会继承失效, 因为a有自己的color; 可以对a重新设置 -->
+    <a href="">a link</a>
+    <!-- h系列的标签的font-size会继承失效 -->
+    <!-- h1有自己的font-size, 2em; 可以对h重新设置 -->
+    <h1>h1 h1 h1</h1>
+  </div>
+</body>
+
+</html>

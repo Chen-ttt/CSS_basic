@@ -1,0 +1,51 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-26 23:42:45
+ * @LastEditTime: 2022-08-26 23:46:54
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* (0, 2, 0, 0) */
+    #father #son {
+      background-color: red;
+    }
+
+    /* (0, 1, 1, 1) */
+    #father p.classS {
+      background-color: green;
+    }
+
+    /* (0, 0, 2, 2) */
+    div.classF p.classS {
+      background-color: teal;
+    }
+
+    /* 无法定位到p, 是继承, 优先级最低 */
+    #father {
+      background-color: pink !important;
+    }
+
+    /* 也是继承 */
+    div#father.classF {
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="classF" id="father">
+    <p class="classS" id="son">p label</p>
+  </div>
+</body>
+
+</html>

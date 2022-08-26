@@ -1,0 +1,83 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-24 01:04:39
+ * @LastEditTime: 2022-08-26 22:28:31
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+
+    span {
+      /* 宽高不生效 */
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+    }
+
+    button {
+      width: 250px;
+      height: 250px;
+    }
+
+    .convertDiv {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+
+    .convertSpan {
+      display: block;
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 显示模式 -->
+
+  <!-- 1. 块级元素 - div,p,h,ul,li,header... -->
+  <!-- 一行只显示一个; 宽度默认是父元素的宽度, 高度默认由内容撑开; 可以设置宽高 -->
+
+  <div>div1</div>
+  <div>div2</div>
+
+  <!-- 2. 行内元素 - a,span,b,u,i,s...-->
+  <!-- 一行可以显示多个; 宽度和高度默认由内容撑开; 不可以设置宽高 -->
+  <span>span1</span>
+  <span>span2</span>
+
+  <br>
+
+  <!-- 3. 行内块元素 - button,input,textarea,select... -->
+  <!-- 一行可以显示多个; 可以设置宽高 -->
+  <button>button1</button>
+  <button>button2</button>
+
+  <br><br>
+
+  <!-- 元素显示模式转换: block/inline-block/inline -->
+  <div class="convertDiv">convert Div 1 to inline-block</div>
+  <div class="convertDiv">convert Div 2 to inline-block</div>
+
+  <span class="convertSpan">convert span 1 to block</span>
+  <span class="convertSpan">convert span 2 to block</span>
+</body>
+
+</html>

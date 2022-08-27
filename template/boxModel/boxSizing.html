@@ -1,0 +1,43 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-27 23:33:10
+ * @LastEditTime: 2022-08-28 00:08:43
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div {
+      /* 内减模式: 设定的宽高已经包含padding和border */
+      width: 300px;
+      height: 300px;
+      background-color: pink;
+
+      /* CSS3新属性 */
+      box-sizing: border-box;
+      /* 1. content-box(默认) - 标准盒模型: width/height设置的仅仅是content的宽高 */
+      /* 2. border-box - IE盒模型: width/height设置的是content+padding+border的宽高 */
+
+      padding: 50px;
+
+      border: 5px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    BOX
+  </div>
+
+</body>
+
+</html>

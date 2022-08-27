@@ -1,0 +1,80 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-27 23:03:01
+ * @LastEditTime: 2022-08-27 23:58:13
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .testF {
+      /* 宽高定义content */
+      width: 300px;
+      height: 300px;
+      background-color: pink;
+
+      /* 内边距 - 内容和边框的中间; 只写一个值, 四个方向都添加 */
+      padding: 50px;
+
+      /* 边框线 */
+      /* 复合属性: 线条粗细 类型 颜色 (顺序随意) */
+      border: 5px solid black;
+      /* solid/dashed/dotted */
+
+      /* 外边距 - 在盒子外面; 写法和padding一样 */
+      margin: 30px;
+    }
+
+    .test {
+      width: 300px;
+      height: 300px;
+      background-color: pink;
+
+      /* 内边距 - 内容和边框的中间 */
+      /* 上 右 下 左 */
+      /* padding: 50px 10px 20px 60px; */
+      /* 上 左右 下 */
+      /* padding: 50px 10px 60px; */
+      /* 上下 左右 */
+      /* padding: 50px 10px; */
+      padding-left: 100px;
+
+      /* 边框线 - 可以只写一个边 */
+      border-bottom: 5px solid black;
+
+      margin-top: 30px;
+    }
+
+    /* 清除默认样式 */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 盒子模型 - 每个标签都可以看作一个盒子 -->
+  <!-- content - padding - border - margin -->
+
+  <!-- 注意: 对于行内元素, 上下方向的内外边距无法通过padding和margin设置; 即垂直方向的位置无法被改变(可以通过line-height改变) -->
+
+  <div class="testF">
+    BOX
+  </div>
+
+  <div class="test">
+    BOX
+  </div>
+
+</body>
+
+</html>

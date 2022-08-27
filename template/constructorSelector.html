@@ -1,0 +1,58 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-28 00:09:41
+ * @LastEditTime: 2022-08-28 00:17:31
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* 结构伪类选择器 */
+    /* E:first-child() - 选中第一个E标签元素 */
+    /* E:last-child() */
+    /* E:nth-child(n) */
+    /* E:nth-last-child(n) - 参数里也可以写公式: 2n表示偶数, (n+5)表示前五个*/
+
+    li:first-child {
+      background-color: pink;
+    }
+
+    /* 从ul的后代中找第一个li; 不设置的话, 1也是粉色的 */
+    ul li:first-child {
+      background-color: aquamarine;
+    }
+
+    li:last-child {
+      background-color: yellowgreen;
+    }
+
+    li:nth-child(3) {
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <li>111</li>
+
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+
+</body>
+
+</html>

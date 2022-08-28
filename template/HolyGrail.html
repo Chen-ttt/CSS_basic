@@ -1,0 +1,92 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-28 16:32:43
+ * @LastEditTime: 2022-08-28 17:18:51
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    header {
+      text-align: center;
+      background-color: aquamarine;
+    }
+
+    footer {
+      text-align: center;
+      background-color: yellowgreen;
+    }
+
+    .main,
+    .left,
+    .right {
+      text-align: center;
+      float: left;
+    }
+
+    .wrapper {
+      padding: 0 100px;
+    }
+
+    .main {
+      width: 100%;
+      background-color: pink;
+    }
+
+    .left {
+      width: 100px;
+      margin-left: -100%;
+      background-color: skyblue;
+
+      position: relative;
+      left: -100px;
+    }
+
+    .right {
+      width: 100px;
+      margin-left: -100px;
+      background-color: orange;
+
+      position: relative;
+      left: 100px;
+    }
+
+    /* 解决高度塌陷 */
+    .clearFix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 圣杯布局: 左右盒子宽度固定, 中间盒子自适应 -->
+  <!-- 1. 三个盒子要在一行, 全都float -->
+  <!-- 2. float后高度塌陷, clearFix -->
+  <!-- 3. 主区域需要预先加载, 需要放在left和right前面, header的后面 -->
+  <!-- 4. 要将left提前到main的前面: 将wrapper父元素设置左右内边距 来放left和right -> main宽度100%占满父元素content部分
+          -> left和right设置margin-left 分别移动到main的两边 -->
+  <!-- 5. 移动之后, left和right会覆盖到main的内容, 并没有处于父元素的padding位置
+          设置relative, 将盒子相对于原本的位置向左右移动 -->
+
+  <header>Header</header>
+  <div class="clearFix wrapper">
+    <div class="main">Main Region</div>
+    <div class="left">Left Region</div>
+    <div class="right">Right Region</div>
+  </div>
+  <footer>Footer</footer>
+
+</body>
+
+</html>

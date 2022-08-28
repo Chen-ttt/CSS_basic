@@ -1,0 +1,92 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-28 00:45:47
+ * @LastEditTime: 2022-08-28 01:35:17
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* 清除浮动 - 清除浮动给别的标签带来的影响 */
+
+    /* 高度塌陷问题: 当top父元素没有高度, 子元素都浮动时, 无法撑开标准流中的父元素的高度, bottom元素会直接出现在顶部 */
+    /* 方法一: 父元素添加高度 */
+    /* 方法五: overflow: hidden; */
+    .top {
+      width: 1500px;
+      /* height: 400px; */
+      background-color: grey;
+      margin: 0 auto;
+
+      overflow: hidden;
+    }
+
+    .left {
+      width: 200px;
+      height: 400px;
+      background-color: pink;
+
+      float: left;
+    }
+
+    .right {
+      width: 500px;
+      height: 400px;
+      background-color: orange;
+
+      float: right;
+    }
+
+    .bottom {
+      height: 200px;
+      background-color: skyblue;
+    }
+
+    /* 方法二(额外标签法): 给父元素最后手动添加一个块级元素, 并设置clear:both, 同时清除左右浮动 */
+    .fix {
+      clear: both;
+    }
+
+    /* 方法三(单伪元素清除法): 用:after给父元素添加伪标签, 将行内变为块级元素, clear */
+    /* .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    } */
+
+    /* 方法四(双伪元素): */
+    /* .clearfix::before解决外边距塌陷的问题(父子标签, 都是块级, 子元素加margin会影响父元素位置) */
+    /* .clearfix::before,
+    .clearfix::after {
+      content: '';
+      display: table;
+    } */
+
+    /* 这里清除浮动 */
+    /* .clearfix::after {
+      clear: both;
+    } */
+  </style>
+</head>
+
+<body>
+
+  <div class="top clearfix">
+    <div class="left"></div>
+    <div class="right"></div>
+    <!-- <div class="fix"></div> -->
+  </div>
+
+  <div class="bottom"></div>
+
+</body>
+
+</html>

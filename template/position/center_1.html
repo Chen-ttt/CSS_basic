@@ -1,0 +1,42 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-28 02:57:02
+ * @LastEditTime: 2022-08-28 15:29:43
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* 固定高度的盒子居中: 父元素relative 子元素absolute */
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+
+      position: absolute;
+      /* 盒子左边沿移动到窗口中线 */
+      left: 50%;
+      /* 左边外边距 负的宽度的一半, 即向左移动宽度的一半 */
+      margin-left: -100px;
+
+      top: 50%;
+      margin-top: -100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-28 15:29:51
+ * @LastEditTime: 2022-08-28 15:40:00
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .one {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+
+      position: absolute;
+      top: 20px;
+      left: 20px;
+
+      /* 一定要是已定位的元素, z-index才生效, 即 非static的元素 */
+      z-index: 1;
+    }
+
+    .two {
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+
+      position: absolute;
+      top: 40px;
+      left: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 布局方式的层级关系 : 标准流 < 浮动 < 定位 -->
+  <!-- 如果两个标签都在标准流中, 或都浮动, 就不存在覆盖问题, 按照顺序排列 -->
+  <!-- 但如果两个标签都定位了, 可能发生覆盖, 如果不设置z-index, 则后写的元素在上面 -->
+
+  <!-- 或者设置z-index: 整数; 取值越大, 层级越高, 显示顺序越靠上 -->
+  <!-- z-index的值, 默认为0 -->
+
+  <div class="one">one</div>
+  <div class="two">two</div>
+
+</body>
+
+</html>

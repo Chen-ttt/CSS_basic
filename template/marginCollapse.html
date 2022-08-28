@@ -1,0 +1,65 @@
+<!--
+ * @Description: 
+ * @Author: Tong Chen
+ * @Date: 2022-08-28 01:07:53
+ * @LastEditTime: 2022-08-28 01:33:18
+ * @LastEditors:  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .father {
+      width: 300px;
+      height: 300px;
+      background-color: skyblue;
+
+      /* 1. position: relative; */
+      /* 5. 触发BFC */
+      /* overflow: hidden; */
+
+      /* 6.  */
+      padding-top: 20px;
+    }
+
+    .son {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+
+      /* 1. position: absolute; */
+      /* 2. display: inline-block; */
+      /* margin-top: 20px; */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 标准文档流中 margin塌陷问题 -->
+  <!-- 1. 发生在垂直方向的块级元素之间 -->
+  <!-- 上边元素的margin-bottom 和 下边元素的margin-top: 最终结果 -->
+  <!-- 正数 和 正数 取最大 -->
+  <!-- 负数 和 负数 取绝对值最大 -->
+  <!-- 正数 和 负数 取两数相加的和 -->
+  <!-- 解决: 只给一个元素设置margin -->
+
+  <!-- 2. 相互嵌套的父子元素(都是块级), 子元素的margin-top会作用在父元素上, 然后两个元素一起下移 -->
+  <!-- 方法一: 父元素relative, 子元素absolute -->
+  <!-- 方法二: 子元素设置为行内块 -->
+  <!-- 方法三: 子元素relative, 且top: 20px, 让子元素相对于原来的位置偏移20px -->
+  <!-- 方法四: 设置浮动, 但浮动之后只能左右, 如果要居中比较麻烦 -->
+  <!-- 方法五: 给父元素设置overflow:hidden, 触发BFC -->
+  <!-- 方法六: 给父元素设置内边距或者边框, 以隔开两个元素 -->
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+
+</html>
